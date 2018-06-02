@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Event-Vark: Never Miss An Event Again</title>
+  <link rel="icon" href="assets/images/icon.png">
+  <script src="assets/js/jquery-3.3.1.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- wrapper to hold everything but the footer; userful for keeping the footer at the bottom of the page even when otherwise empty -->
+  <div class="sticky-footer-wrapper">
+
+    <!-- bootstrap navbar with hamburger menu -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+            aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">The League of Extraordinary Coders</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="movies.html">My Movies</a>
+            </li>
+            <li>
+              <a href="events.html">My Events</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- jumbotron with logo and links -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Event
+          <a href="index.html">
+            <img id="logo" src="assets/images/aardvark.png">
+          </a> Vaark!</h1>
+        <nav class="links">
+          <a href="index.html">Home</a>
+          <a href="movies.html">My Movies</a>
+          <a href="events.html">My Events</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- main content container -->
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- container for saved Movies -->
+        <div class="col-md-8 col-md-offset-2 main-content" id="my-movie-content">
+          <h2>My Saved Movies</h2>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- footer -->
+  <div class="container-fluid footer">
+    <footer>
+      <div class="row">
+
+        <div class="col-sm-6 col-xs-6 tmdb-logo-div">
+          <img class="tmdb-logo" src="assets/images/TMDB.logo.png" alt="">
+        </div>
+        <div class="col-sm-6 col-xs-6 eventful-badge eventful-large eventful-logo-div">
+          <img class="eventful-logo" src="https://api.eventful.com/images/powered/eventful_139x44.gif" alt="Local Events, Concerts, Tickets">
+          <p class="eventful-logo-p">
+            <a href="https://eventful.com/" target="_blank">Events</a> by Eventful</p>
+        </div>
+
+        <div>
+          <p class="footer-p">&copy; 2018 The League of Extraordinary Coders</p>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/events.js"></script>
+</body>
+
+
+</html>

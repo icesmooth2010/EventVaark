@@ -1,0 +1,1145 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 50px;
+  }
+  
+  .sticky-footer-wrapper {
+    flex: 1 0 auto;
+  }
+  
+  h2, h3, .at-a-glance h4 {
+    text-align: center;
+    width: 100%;
+  }
+  
+  h4 {
+    width: 100%;
+  }
+  
+  /* Navbar and Jumbotron styling */
+  
+  .navbar {
+    background-color: #000;
+    border-bottom: none;
+  }
+  
+  .navbar a {
+    font-weight: bold;
+  }
+  
+  .jumbotron {
+    background: linear-gradient(#000, #850000);
+    box-shadow: 0 0 30px #000;
+    color: #cfcfcf;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  .jumbotron h1 {
+    font-size: 5em;
+  }
+  
+  .jumbotron h1 a:hover {
+    text-decoration: none;
+  }
+  
+  .jumbotron h1 img {
+    margin: -40px -55px 0 -50px;
+  }
+  
+  .jumbotron nav a {
+    border-right: 1px solid #cfcfcf;
+    color: #cfcfcf;
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0 20px;
+  }
+  
+  .jumbotron nav a:last-child {
+    border: none;
+  }
+  
+  .jumbotron nav a:hover {
+    color: #979797;
+    text-decoration: none;
+  }
+  
+  #logo {
+    position: relative;
+  }
+  
+  .links {
+    margin-top: 50px;
+  }
+  
+  /* Predefined Search Buttons */
+  
+  .btn-array {
+    text-align: center;
+  }
+  
+  .btn-array .button {
+    margin: 0 10px;
+  }
+  
+  .btn-array p {
+    margin-bottom: 2px;
+  }
+  
+  .button {
+    background: linear-gradient(#850000, #000);
+    border-radius: 8px;
+    border: 3px solid #555;
+    color: #ccc;
+    opacity: .87;
+    padding: 2px 8px 3px 8px;
+  }
+  
+  .button:hover {
+    opacity: 1;
+    outline: none;
+  }
+  
+  .button:active {
+    outline: none;
+  }
+  
+  .button:focus {
+    outline: none;
+  }
+  
+  /* Search Form styling */
+  
+  .search-forms {
+    padding: 0 50px;
+  }
+  
+  form label, form input {
+    display: block;
+    width: 100%;
+  }
+  
+  form label {
+    margin: 15px 0 3px 0;
+  }
+  
+  form, table {
+    margin-bottom: 30px;
+  }
+  
+  #movie-search-btn, #event-search-btn {
+    margin: 10px 0 20px 0;
+    width: unset;
+  }
+  
+  #search-error {
+    color: #ff0000;
+  }
+  
+  /* Dynamic-Content div styling */
+  
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #my-movie-content {
+    display: flex;
+  }
+  
+  #my-event-content {
+    display: block;
+  }
+  
+  /* individual movie search result container */
+  
+  .movie-container {
+    display: inline-block;
+    padding: 15px;
+    position: relative;
+    vertical-align: top;
+    width: 20%;
+  }
+  
+  .movie-container img {
+    border: 3px solid #555;
+    box-shadow: 8px 8px 15px #000;
+  }
+  
+  .movie-container p, .movie-container img, .movie-container button {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .movie-date {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0;
+    text-align: center;
+  }
+  
+  .movie-title {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  
+  .movie-details {
+    text-align: center;
+  }
+  
+  .movie-container button {
+    margin-bottom: 10px;
+  }
+  
+  .movie-container h6 {
+    font-size: 16px;
+  }
+  
+  .movie-link {
+    color: #850000;
+    font-weight: bold;
+  }
+  
+  .movie-link:hover {
+    color: #35ff03;
+    text-decoration: none;
+  }
+  
+  .movie-poster {
+    height: 200px;
+    margin: 10px auto;
+    width: 135px;
+  }
+  
+  /* individual event search result container */
+  
+  #my-event-content {
+    display: block;
+  }
+  
+  .event-container {
+    display: block;
+    margin: 20px 0;
+    position: relative;
+  }
+  
+  .event-info-container {
+    display: inline-block;
+    max-width: 50%;
+    padding-left: 20px;
+    vertical-align: middle;
+  }
+  
+  .event-poster {
+    border: 3px solid #555;
+    box-shadow: 8px 8px 15px #000;
+    margin-left: 20px;
+    vertical-align: middle;
+    width: 100px;
+  }
+  
+  .event-date {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2em;
+  }
+  
+  .event-city {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2em;
+  }
+  
+  .event-title {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  
+  .add-event-btn {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .event-link {
+    color: #850000;
+    font-weight: bold;
+  }
+  
+  .event-link:hover {
+    color: #35ff03;
+    text-decoration: none;
+  }
+  
+  /* At-a-glance table styling */
+  
+  .at-a-glance {
+    padding: 0 50px;
+  }
+  
+  .at-a-glance tr {
+    border-bottom: 1px solid #c9c9c9;
+    line-height: 2;
+  }
+  
+  .at-a-glance thead tr {
+    border-bottom: 2px solid #333;
+  }
+  
+  .glance-table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  
+  .glance-table th:first-child {
+    width: 120px;
+  }
+  
+  .at-a-glance th {
+    font-size: 1.1em;
+  }
+  
+  /* footer styling */
+  
+  .tmdb-logo-div {
+    text-align: center;
+    width: 50%;
+  }
+  
+  .tmdb-logo {
+    width: 120px;
+  }
+  
+  .eventful-logo-div {
+    text-align: center;
+    width: 50%;
+  }
+  
+  .eventful-logo {
+    width: 120px;
+  }
+  
+  .footer {
+    background: linear-gradient(#850000, #000);
+    box-shadow: 0 0 30px #000;
+    color: #bbb;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* media queries */
+  
+  @media screen and (max-width: 1600px) {
+    .at-a-glance, .search-forms {
+      padding: 0 20px;
+    }
+    .movie-container {
+      width: 25%;
+    }
+  }
+  
+  @media screen and (max-width: 1385px) {
+    .at-a-glance {
+      padding: 0 10px;
+    }
+    .movie-container img {
+      height: 180px;
+      width: 121px;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .at-a-glance {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 991px) {
+    .search-forms {
+      border-top: 2px solid grey;
+      border-bottom: 2px solid grey;
+      margin-top: 10px;
+      padding-bottom: 10px;
+      width: 100%;
+    }
+    form label, form input {
+      display: inline-block;
+      margin-top: 5px;
+      width: 20%;
+    }
+    form label {
+      text-align: right;
+    }
+    #movie-input {
+      width: 61%;
+    }
+    h4 {
+      text-align: center;
+    }
+    #movie-search-btn, #event-search-btn, form, h4 {
+      margin-bottom: 0;
+    }
+    .pre-defined {
+      display: none;
+    }
+    h4 {
+      margin-top: 10px;
+    }
+    .second-h4 {
+      margin-top: 15px
+    }
+    h3 {
+      margin: 8px 0 4px 0;
+    }
+    .jumbotron {
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .event-title {
+      font-size: 1em;
+      margin-bottom: 4px;
+    }
+    .event-poster {
+      width: 75px;
+    }
+    .event-date, .event-city {
+      margin: 4px 0;
+    }
+    .movie-container img {
+      height: 150px;
+      width: 101px;
+    }
+    .movie-link {
+      font-size: 1em;
+    }
+    .movie-date {
+      font-size: 1em;
+    }
+    .movie-title {
+      font-size: 1.15em;
+    }
+  }
+  
+  @media screen and (max-width: 525px) {
+    .jumbotron h1 {
+      font-size: 3em;
+    }
+    .tmdb-logo {
+      width: 80px;
+    }
+    .eventful-logo {
+      width: 80px;
+    }
+    .eventful-logo-p {
+      font-size: .7em;
+    }
+    .jumbotron h1 img {
+      margin: -40px -40px 0 -40px;
+      width: 120px;
+    }
+    .event-title {
+      margin-bottom: 2px;
+    }
+    .event-date, .event-city, .event-title {
+      font-size: .9em;
+      margin: 2px 0;
+    }
+    .add-event-btn {
+      font-size: .9em;
+    }
+    .movie-container img {
+      height: 140px;
+      width: 95px;
+    }
+    .movie-link {
+      font-size: .9em;
+    }
+    .movie-date {
+      font-size: .9em;
+    }
+    .movie-title {
+      font-size: 1em;
+    }
+    form input {
+      width: 61%;
+    }
+    .btn-array .button {
+      margin: 0 4px;
+    }
+    .button {
+      font-size: .9em;
+    }
+  }
+  
+  @media screen and (max-width: 475px) {
+    .navbar a {
+      font-size: .9em;
+    }
+    .jumbotron h1 {
+      font-size: 3em;
+    }
+    .jumbotron h1 img {
+      margin: -40px -40px 0 -40px;
+      width: 120px;
+    }
+    .jumbotron nav a {
+      font-size: 1.1em;
+      padding: 0 12px 0 9px;
+    }
+    form input, #movie-input {
+      width: 45%;
+    }
+    form label {
+      width: 30%;
+    }
+    .movie-container img {
+      height: 120px;
+      width: 81px;
+    }
+    .movie-link, .movie-date {
+      font-size: .8em;
+    }
+    .movie-title {
+      font-size: .9em;
+    }
+    .btn-array .button {
+      margin: 0 2px;
+    }
+    .button {
+      font-size: .8em;
+      padding: 2px 3px;
+    }
+  }
+  
+  @media screen and (max-width: 420px) {
+    .movie-container img {
+      height: 90px;
+      width: 61px;
+    }
+    .event-title {
+      margin-bottom: 4px;
+    }
+    .event-poster {
+      width: 60px;
+    }
+    .event-date, .event-city, .event-title {
+      font-size: .8em;
+    }
+    .footer-p {
+      font-size: .75em;
+    }
+  }
+  
+  @media screen and (max-width: 350px) {
+    .movie-container img {
+      height: 120px;
+      width: 81px;
+    }
+    .navbar a {
+      font-size: .85em;
+    }
+    .btn-array .button {
+      margin: 0 4px;
+      padding: 4px;
+    }
+    .jumbotron nav a {
+      font-size: 1em;
+      padding: 0 10px 0 8px;
+    }
+    .jumbotron h1 {
+      font-size: 2.7em;
+    }
+    form input, #movie-input {
+      width: 45%;
+    }
+    #movie-input .movie-title {
+      font-size: .9em;
+    }
+    .button {
+      font-size: .7em;
+    }
+    .movie-container {
+      width: 50%;
+    }
+  }body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+.sticky-footer-wrapper {
+  flex: 1 0 auto;
+}
+
+h2, h3, .at-a-glance h4 {
+  text-align: center;
+  width: 100%;
+}
+
+h4 {
+  width: 100%;
+}
+
+/* Navbar and Jumbotron styling */
+
+.navbar {
+  background-color: #000;
+  border-bottom: none;
+}
+
+.navbar a {
+  font-weight: bold;
+}
+
+.jumbotron {
+  background: linear-gradient(#000, #850000);
+  box-shadow: 0 0 30px #000;
+  color: #cfcfcf;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 5em;
+}
+
+.jumbotron h1 a:hover {
+  text-decoration: none;
+}
+
+.jumbotron h1 img {
+  margin: -40px -55px 0 -50px;
+}
+
+.jumbotron nav a {
+  border-right: 1px solid #cfcfcf;
+  color: #cfcfcf;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0 20px;
+}
+
+.jumbotron nav a:last-child {
+  border: none;
+}
+
+.jumbotron nav a:hover {
+  color: #979797;
+  text-decoration: none;
+}
+
+#logo {
+  position: relative;
+}
+
+.links {
+  margin-top: 50px;
+}
+
+/* Predefined Search Buttons */
+
+.btn-array {
+  text-align: center;
+}
+
+.btn-array .button {
+  margin: 0 10px;
+}
+
+.btn-array p {
+  margin-bottom: 2px;
+}
+
+.button {
+  background: linear-gradient(#850000, #000);
+  border-radius: 8px;
+  border: 3px solid #555;
+  color: #ccc;
+  opacity: .87;
+  padding: 2px 8px 3px 8px;
+}
+
+.button:hover {
+  opacity: 1;
+  outline: none;
+}
+
+.button:active {
+  outline: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+/* Search Form styling */
+
+.search-forms {
+  padding: 0 50px;
+}
+
+form label, form input {
+  display: block;
+  width: 100%;
+}
+
+form label {
+  margin: 15px 0 3px 0;
+}
+
+form, table {
+  margin-bottom: 30px;
+}
+
+#movie-search-btn, #event-search-btn {
+  margin: 10px 0 20px 0;
+  width: unset;
+}
+
+#search-error {
+  color: #ff0000;
+}
+
+/* Dynamic-Content div styling */
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#my-movie-content {
+  display: flex;
+}
+
+#my-event-content {
+  display: block;
+}
+
+/* individual movie search result container */
+
+.movie-container {
+  display: inline-block;
+  padding: 15px;
+  position: relative;
+  vertical-align: top;
+  width: 20%;
+}
+
+.movie-container img {
+  border: 3px solid #555;
+  box-shadow: 8px 8px 15px #000;
+}
+
+.movie-container p, .movie-container img, .movie-container button {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.movie-date {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.movie-title {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.movie-details {
+  text-align: center;
+}
+
+.movie-container button {
+  margin-bottom: 10px;
+}
+
+.movie-container h6 {
+  font-size: 16px;
+}
+
+.movie-link {
+  color: #850000;
+  font-weight: bold;
+}
+
+.movie-link:hover {
+  color: #35ff03;
+  text-decoration: none;
+}
+
+.movie-poster {
+  height: 200px;
+  margin: 10px auto;
+  width: 135px;
+}
+
+/* individual event search result container */
+
+#my-event-content {
+  display: block;
+}
+
+.event-container {
+  display: block;
+  margin: 20px 0;
+  position: relative;
+}
+
+.event-info-container {
+  display: inline-block;
+  max-width: 50%;
+  padding-left: 20px;
+  vertical-align: middle;
+}
+
+.event-poster {
+  border: 3px solid #555;
+  box-shadow: 8px 8px 15px #000;
+  margin-left: 20px;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.event-date {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2em;
+}
+
+.event-city {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2em;
+}
+
+.event-title {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.add-event-btn {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.event-link {
+  color: #850000;
+  font-weight: bold;
+}
+
+.event-link:hover {
+  color: #35ff03;
+  text-decoration: none;
+}
+
+/* At-a-glance table styling */
+
+.at-a-glance {
+  padding: 0 50px;
+}
+
+.at-a-glance tr {
+  border-bottom: 1px solid #c9c9c9;
+  line-height: 2;
+}
+
+.at-a-glance thead tr {
+  border-bottom: 2px solid #333;
+}
+
+.glance-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.glance-table th:first-child {
+  width: 120px;
+}
+
+.at-a-glance th {
+  font-size: 1.1em;
+}
+
+/* footer styling */
+
+.tmdb-logo-div {
+  text-align: center;
+  width: 50%;
+}
+
+.tmdb-logo {
+  width: 120px;
+}
+
+.eventful-logo-div {
+  text-align: center;
+  width: 50%;
+}
+
+.eventful-logo {
+  width: 120px;
+}
+
+.footer {
+  background: linear-gradient(#850000, #000);
+  box-shadow: 0 0 30px #000;
+  color: #bbb;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1600px) {
+  .at-a-glance, .search-forms {
+    padding: 0 20px;
+  }
+  .movie-container {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 1385px) {
+  .at-a-glance {
+    padding: 0 10px;
+  }
+  .movie-container img {
+    height: 180px;
+    width: 121px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .at-a-glance {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .search-forms {
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  form label, form input {
+    display: inline-block;
+    margin-top: 5px;
+    width: 20%;
+  }
+  form label {
+    text-align: right;
+  }
+  #movie-input {
+    width: 61%;
+  }
+  h4 {
+    text-align: center;
+  }
+  #movie-search-btn, #event-search-btn, form, h4 {
+    margin-bottom: 0;
+  }
+  .pre-defined {
+    display: none;
+  }
+  h4 {
+    margin-top: 10px;
+  }
+  .second-h4 {
+    margin-top: 15px
+  }
+  h3 {
+    margin: 8px 0 4px 0;
+  }
+  .jumbotron {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .event-title {
+    font-size: 1em;
+    margin-bottom: 4px;
+  }
+  .event-poster {
+    width: 75px;
+  }
+  .event-date, .event-city {
+    margin: 4px 0;
+  }
+  .movie-container img {
+    height: 150px;
+    width: 101px;
+  }
+  .movie-link {
+    font-size: 1em;
+  }
+  .movie-date {
+    font-size: 1em;
+  }
+  .movie-title {
+    font-size: 1.15em;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .jumbotron h1 {
+    font-size: 3em;
+  }
+  .tmdb-logo {
+    width: 80px;
+  }
+  .eventful-logo {
+    width: 80px;
+  }
+  .eventful-logo-p {
+    font-size: .7em;
+  }
+  .jumbotron h1 img {
+    margin: -40px -40px 0 -40px;
+    width: 120px;
+  }
+  .event-title {
+    margin-bottom: 2px;
+  }
+  .event-date, .event-city, .event-title {
+    font-size: .9em;
+    margin: 2px 0;
+  }
+  .add-event-btn {
+    font-size: .9em;
+  }
+  .movie-container img {
+    height: 140px;
+    width: 95px;
+  }
+  .movie-link {
+    font-size: .9em;
+  }
+  .movie-date {
+    font-size: .9em;
+  }
+  .movie-title {
+    font-size: 1em;
+  }
+  form input {
+    width: 61%;
+  }
+  .btn-array .button {
+    margin: 0 4px;
+  }
+  .button {
+    font-size: .9em;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .navbar a {
+    font-size: .9em;
+  }
+  .jumbotron h1 {
+    font-size: 3em;
+  }
+  .jumbotron h1 img {
+    margin: -40px -40px 0 -40px;
+    width: 120px;
+  }
+  .jumbotron nav a {
+    font-size: 1.1em;
+    padding: 0 12px 0 9px;
+  }
+  form input, #movie-input {
+    width: 45%;
+  }
+  form label {
+    width: 30%;
+  }
+  .movie-container img {
+    height: 120px;
+    width: 81px;
+  }
+  .movie-link, .movie-date {
+    font-size: .8em;
+  }
+  .movie-title {
+    font-size: .9em;
+  }
+  .btn-array .button {
+    margin: 0 2px;
+  }
+  .button {
+    font-size: .8em;
+    padding: 2px 3px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .movie-container img {
+    height: 90px;
+    width: 61px;
+  }
+  .event-title {
+    margin-bottom: 4px;
+  }
+  .event-poster {
+    width: 60px;
+  }
+  .event-date, .event-city, .event-title {
+    font-size: .8em;
+  }
+  .footer-p {
+    font-size: .75em;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .movie-container img {
+    height: 120px;
+    width: 81px;
+  }
+  .navbar a {
+    font-size: .85em;
+  }
+  .btn-array .button {
+    margin: 0 4px;
+    padding: 4px;
+  }
+  .jumbotron nav a {
+    font-size: 1em;
+    padding: 0 10px 0 8px;
+  }
+  .jumbotron h1 {
+    font-size: 2.7em;
+  }
+  form input, #movie-input {
+    width: 45%;
+  }
+  #movie-input .movie-title {
+    font-size: .9em;
+  }
+  .button {
+    font-size: .7em;
+  }
+  .movie-container {
+    width: 50%;
+  }
+}
